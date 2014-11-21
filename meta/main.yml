@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Michael Crilly
+  description: NodeJS + NPM Role
+  company: AutoLogic Technology Ltd
+  license: BSD
+  min_ansible_version: 1.7
+  platforms:
+  - name: EL
+    versions:
+      - 6
+  categories:
+    - development
+dependencies: []

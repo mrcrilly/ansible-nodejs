@@ -1,0 +1,13 @@
+---
+
+- name: Check if we have the EPEL repo
+  stat: path=/etc/yum.repos.d/epel.repo
+  register: have_epel
+
+- name: Download EPEL
+  get_url: url=https://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm dest=/tmp/epel.rpm
+  when: not have_epel.stat.exists
+
+- name: Install the EPEL RPM
+  yum: name=/tmp/epel.rpmstate=present
+  when: not have_epel.stat.exists

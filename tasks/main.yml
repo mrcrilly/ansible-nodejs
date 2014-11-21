@@ -1,0 +1,11 @@
+---
+
+- include: repository.yml
+  tags:
+    - mrcrilly_nodejs
+    - mrcrilly_nodejs_repository
+
+- include: software.yml
+  tags:
+    - mrcrilly_nodejs
+    - mrcrilly_nodejs_software
